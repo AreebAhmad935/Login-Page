@@ -1,0 +1,147 @@
+Scaffold(
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        width: MediaQuery.of(context).size.width,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+              begin: Alignment.topRight,
+              end: Alignment.bottomRight,
+              colors: [
+                Colors.white,
+                Colors.white,
+                Colors.white,
+              ]),
+        ),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 10),
+              Image.asset(
+                'assets/login.svg.png',
+                height: 150,
+                width: 150,
+              ),
+              Text(
+                'Login Now',
+                style: TextStyle(
+                  color: Colors.orange,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                'Please Login to continue using our app',
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                height: 480,
+                width: 320,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey, spreadRadius: 1, blurRadius: 20),
+                    ]),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(
+                      'Enter via social networks',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15
+                      ,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ElevatedButton.icon(
+                          onPressed: () {},
+                          icon: Icon(Icons.facebook),
+                          label: Text('Facebook'),
+                        ),
+                        ElevatedButton.icon(
+                          onPressed: () {},
+                          icon: Icon(Icons.people),
+                          label: Text('Gmail'),
+                          style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.orange),
+                          ),
+                        ),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Text(
+                      'Login with email or mobile phone',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 15,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10,0,10,0),
+                      child: TextField(
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: 'Email',
+                          hintText: 'abc@xyz',
+                          hoverColor: Colors.grey,
+                          suffixIcon: Icon(
+                            Icons.email_sharp,
+                            size: 17,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10,0,10,0),
+                      child: TextField(
+                        decoration: const InputDecoration(
+                          labelText: 'Phone Number',
+                          border: OutlineInputBorder(),
+                          hintText: '03xxxxxxxxx',
+                          suffixIcon: Icon(
+                            Icons.remove_red_eye_sharp,
+                            size: 17,
+                          ),
+                        ),
+                      ),
+                    ),
+                    Row( mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        Text('Remember me'),
+                        Text('forgot password?',
+                        ),
+                      
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
